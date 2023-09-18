@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://si4x4ffkhved"]
+[gd_scene load_steps=7 format=3 uid="uid://si4x4ffkhved"]
 
 [ext_resource type="Script" path="res://scenes/ui/end_screen.gd" id="1_jstr0"]
+[ext_resource type="PackedScene" uid="uid://fw6btdl7iud" path="res://scenes/ui/sound_button.tscn" id="2_yfrm6"]
 
 [sub_resource type="Animation" id="Animation_rfyl4"]
 resource_name = "in"
@@ -123,12 +124,13 @@ text = "You won!"
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 
-[node name="RestartButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="RestartButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("2_yfrm6")]
 unique_name_in_owner = true
 layout_mode = 2
-text = "Restart"
+text = "Restart
+"
 
-[node name="QuitButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="QuitButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("2_yfrm6")]
 unique_name_in_owner = true
 layout_mode = 2
 text = "Quit"
