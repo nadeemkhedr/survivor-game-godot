@@ -37,6 +37,7 @@ func _process(delta):
 	if move_sign != 0:
 		visuals.scale = Vector2(move_sign, 1)
 
+
 func get_movement_vector():
 	var x_movement = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	var y_movement = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
@@ -68,7 +69,9 @@ func on_damage_interval_timer_timeout():
 
 
 func on_health_changed():
+	GameEvents.emit_player_damaged()
 	update_health_display()
+
 
 func on_ability_upgrade_added(ability_upgrade: AbilityUpgrade, current_upgrades: Dictionary):
 	if ability_upgrade is Ability:
