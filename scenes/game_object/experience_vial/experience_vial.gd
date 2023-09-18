@@ -41,3 +41,4 @@ func on_area_entered(other_area: Area2D):
 	# wait for all the previous tweens are finish then move to next tween
 	tween.chain()
 	tween.tween_callback(collect)
+	$RandomStreamPlayer2DComponent.play_random()
