@@ -21,7 +21,6 @@ func set_ability_upgrades(upgrades: Array[AbilityUpgrade]):
 		delay += 0.2
 
 
-
 func on_upgrade_selected(upgrade: AbilityUpgrade):
 	upgrade_selected.emit(upgrade)
 	$AnimationPlayer.play("out")
