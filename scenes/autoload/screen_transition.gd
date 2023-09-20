@@ -16,3 +16,8 @@ func emit_transitioned_halfway():
 		skip_emit = false
 		return
 	transitioned_halfway.emit()
+
+func transition_to_scene(scene_path: String):
+	transition()
+	await transitioned_halfway
+	get_tree().change_scene_to_file(scene_path)
